@@ -1,0 +1,15 @@
+El loop (del inglés bucle), es un bucle que nos va a ayudar a realizar una acción repetidas veces sin necesidad de repetir el código por nuestra cuenta. El bucle toma 3 parámatros.
+	for(var i = 0; i < 10; i++){
+	 console.log(i)
+	}
+Dentro del paréntesis, podemos ver la creación de una variable i, con igualdad en 0. Luego del punto y coma decimos, que mientras i sea menor a 10, aumente en 1 el valor de i, reflejado en úlitmo argumento después del punto y coma.
+Finalmente usamos un console.log((pasando la i)) para ver en consola el resultado de nuestro loop.
+
+Operadores lógicos
+Estos son 3 esencialmente:
+ && (AND)Este quiere decir que mientras una condición Y (and) otra sean verdaderas se ejecuta cierto código.
+ || (OR)Este quiere decir que una de las condiciones debe ser verdaderas para que se ejecute el código.
+ ! (NOT)Este es un signo de distinto, por ej, quiere decir que contradice el argumento, por ej:
+		true === true //true
+		!true ===true //false
+		false === !true //true
