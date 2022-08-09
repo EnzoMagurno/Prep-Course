@@ -1,0 +1,55 @@
+Objetos: los objetos en JS son una manera de agrupar información sobre un mismo tipo de dato. Ejemplo: 
+Si quiero decir esto:
+
+const name = 'Enzo'
+const lastName = 'Magurno'
+const age = 23
+
+Sería más cómodo e intuitivo decir:
+const object = {
+    name: 'Enzo',
+    lastName: 'Magurno',
+    age: 23
+}
+Note como un objeto envuelve datos asignados con variables seguido de un dos puntos, valor y coma para podes seguir asignando más datos.
+
+Propiedades: las propiedades de un objeto hacen referencia al key de mi objeto, en el caso anterior, por ej, harían referencia a: name, lastName, age.
+No solo se pueden almacenar strings o number, si no todo tipo de dato: string, number, boolean, array, another object, function, null, undefined, etc.
+
+Métodos: los métodos son las funciones que le asignamos a un objeto para poder actuar en base a lo requerido, se le pueden pasar argumentos entre (). Por ej:
+const object = {
+    name: 'Enzo',
+    lastName: 'Magurno',
+    sayHi: function(){
+        return `Hola de nuevo ${this.name} ${this.lastName}`
+    }
+};
+
+Bucle for-in: este bucle itera sobre cada par key-value. Permitiendo su uso. Su sintáxis se conforma de la palabra reservada for, seguido un paréntesis, declarar una variable, la palabra in, y el objeto que queremos iterar. Ej:
+for(iterated in object){
+    console.log(object) //Esto trae el objeto entero con todos sus key-value.
+}
+
+for(iterated in object){
+    console.log(object[iterated]) //Esto trae los values.
+}
+
+for(iterated in object){
+    console.log(object[iterated]) //Esto trae los keys.
+}
+
+Notación de puntos vs notación de corchetes: la notación es una forma de refererinos al objeto y sus propiedades, si quiero crear una nueva propiedad, editar, eliminar, reasignar valor, etc.
+Se usa para acceder la dot notation o bracket notation, y su sintáxis es:
+
+const object = {
+
+}
+object.name = 'Enzo'
+object.lastName = 'Magurno'
+object['age'] = 23
+object['lovesJs'] = Definitely yes'
+
+A su vez podemos usar el valor de una variable externa, para asignarla como propiedad a mi objeto, esto sería:
+const data = 'country'
+object[data] = 'Argentina'
+Note como en este caso, debemos usar exclusivamente el bracket notation para refererinos a la variable data, si usamos el dot notation estariamos asignando una nueva propiedad al objeto sin más.
